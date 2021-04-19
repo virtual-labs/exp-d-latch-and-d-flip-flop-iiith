@@ -1,7 +1,7 @@
 **D-Latch**
 
-<img src="procedure_pics/dLatch.bmp">
+<img src="images/dLatch.bmp">
 
 **Positive Edge FlipFlop**
 
-<img src="images/procedure_pics/PositiveFlipFlop.bmp">
+<img src="images/PositiveFlipFlop.bmp">
