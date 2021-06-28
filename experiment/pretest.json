@@ -26,8 +26,7 @@
           },
 "correctAnswer":"a"},
             
-{"question":" 4. The timing diagram corresponds to 
-<img src='images/pos_edge_d.jpg'>",
+{"question":" 4. The timing diagram corresponds to <img src='images/pos_edge_d.jpg'>",
 "answers":{
             "a":"D latch",
             "b":"Negative edge triggered flip flop",
