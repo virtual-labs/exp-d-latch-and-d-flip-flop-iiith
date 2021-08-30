@@ -33,10 +33,5 @@ From the timing diagram it is clear that the output Q changes only at the positi
 1. When a circuit is edge triggered the output can change only on the rrising or falling edge of the clock. But in the case of level-clocked, the output can change when the clock is high (or low).  
 2. In edge triggering output can change only at one instant during the lock cycle; with level clocking output can change during an entire half cycle of the clock.  
 
-Objective:
-
-1. To design D latch using pass transistor logic.  
-2.To design Positive Edge Trigger D-flip flop.  
-3. To design Negative Egde Trigger D-flip flop.    
 
 
