@@ -51,7 +51,7 @@ function flipflopvalidate() {
   // console.log(x)
   circuit_valid = 0
   for (let i = 0; i < x.length; i++) {
-    if (jsmap.has("input0$latch" + x[i][0]) && jsmap.has("clock0$latch0" + x[i][0]) && jsmap.has("latch" + x[i][0] + "$latch" + x[i][1]) && jsmap.has("latch" + x[i][1] + "$output0") && jsmap.has("clockbar0$latch" + x[i][1]) && (jsmap.size == 5)) {
+    if (jsmap.has("input0$latch" + x[i][0]) && jsmap.has("clock0$latch" + x[i][0]) && jsmap.has("latch" + x[i][0] + "$latch" + x[i][1]) && jsmap.has("latch" + x[i][1] + "$output0") && jsmap.has("clockbar0$latch" + x[i][1]) && (jsmap.size == 5)) {
       circuit_valid = 1
       break
     }
