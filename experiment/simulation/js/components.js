@@ -1,3 +1,5 @@
+'use strict';
+
 const jsplumbInstance = jsPlumb.getInstance({
 
     container: diagram,
@@ -14,6 +16,7 @@ const jsplumbInstance = jsPlumb.getInstance({
     paintStyle: { strokeWidth: 3, stroke: "#456" },
     connectionsDetachable: true,
 });
+
 jsplumbInstance.bind("ready", function () {
     jsplumbInstance.registerConnectionTypes({
         "red-connection": {
@@ -24,16 +27,12 @@ jsplumbInstance.bind("ready", function () {
     });
 });
 
-
 function editConnectionMap() {
-    const con = jsplumbInstance.getAllConnections();
     connectionMap.clear();
-    for (i = 0; i < con.length; i++) {
-        const s = con[i].sourceId, t = con[i].targetId;
-        const r = s.concat("$", t);
-        connectionMap.set(r, t)
-
-    }
+    jsplumbInstance.getAllConnections().forEach(connection => {
+        const connectionId = `${connection.sourceId}$${connection.targetId}`
+        connectionMap.set(connectionId, connection.targetId)
+    });
 }
 
 jsplumbInstance.bind("connection", () => {
@@ -47,8 +46,8 @@ jsplumbInstance.bind("dblclick", function (ci) {
 
 });
 
-const count = {PMOS: 0, NMOS: 0, VDD: 0, Ground: 0, Inverter: 0, Mux: 0, Latch: 0, Transistor: 0, Clock: 0, Clockbar: 0}
-const maxCount = {PMOS: 0, NMOS: 0, VDD: 0, Ground: 0, Inverter: 2, Mux: 2, Latch: 2, Transistor: 0, Clock: 1, Clockbar: 1}
+const count = { PMOS: 0, NMOS: 0, VDD: 0, Ground: 0, Inverter: 0, Mux: 0, Latch: 0, Transistor: 0, Clock: 0, Clockbar: 0 }
+const maxCount = { PMOS: 0, NMOS: 0, VDD: 0, Ground: 0, Inverter: 2, Mux: 2, Latch: 2, Transistor: 0, Clock: 1, Clockbar: 1 }
 
 function addInstanceInverter(id) {
     addInstance(id, [1, 0.5, 1, 0], -1, true)
@@ -71,6 +70,7 @@ function addInstanceLatch(id) {
 function addInstanceClock(id) {
     addInstance(id, [1, 0.25, 1, 0], -1, true)
 }
+
 function addInstanceClockbar(id) {
     addInstance(id, [1, 0.25, 1, 0], -1, true)
 }
