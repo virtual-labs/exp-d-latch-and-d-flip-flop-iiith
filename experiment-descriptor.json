@@ -35,6 +35,13 @@
       "content-type": "assesment"
     },
     {
+      "target": "demo-latch.html",
+      "source": "simulation/demo-latch.html",
+      "label": "Demo",
+      "unit-type": "task",
+      "content-type": "simulation"
+    },
+    {
       "target": "simulation.html",
       "source": "simulation/index.html",
       "label": "Simulation",
