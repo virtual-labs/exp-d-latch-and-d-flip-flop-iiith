@@ -1,7 +1,9 @@
-function latchValidate() {
+'use strict';
+import { connectionMap } from "./main.js";
+export function latchValidate() {
   const x = permutator([0, 1])
   // console.log(x)
-  circuitValid = 0
+  let circuitValid = 0
   for (let i = 0; i < x.length; i++) {
     if (connectionMap.has("input0$mux0") && connectionMap.has("clock0$mux0") && connectionMap.has("inverter" + x[i][1] + "$mux0") && connectionMap.has("mux0$inverter" + x[i][0]) && connectionMap.has("inverter0$inverter" + x[i][1]) && connectionMap.has("inverter" + x[i][0] + "$output0") && (connectionMap.size === 6)) {
       circuitValid = 1
@@ -9,26 +11,18 @@ function latchValidate() {
     }
   }
   if (circuitValid) {
+    console.log(document.getElementById("graph-image"))
     document.getElementById("graph-image").src = "./images/Screenshot (168).png"
     document.getElementById("graph-image").style.display = "block";
     changeObservation("&#10004; Circuit is correct", 'text-danger', 'text-success')
   }
   else {
-    // document.getElementById("graph-image").alt = "The graph is not shown since the circuit connection is incorrect"
     document.getElementById("graph-image").style.display = "none";
     changeObservation("&#10060; Circuit is incorrect", 'text-success', 'text-danger')
   }
 }
-function circuitValidate() {
-  if (selectedTab === currentTab.LATCH) {
-    latchValidate()
-  }
-  else {
-    flipflopValidate()
-  }
-  document.getElementById('error-container').style = 'display:none;';
-}
-function permutator(inputArr) {
+
+export function permutator(inputArr) {
   const results = [];
 
   function permute(arr, memo) {
@@ -50,10 +44,11 @@ function permutator(inputArr) {
 
   return permute(inputArr);
 }
-function flipflopValidate() {
+
+export function flipflopValidate() {
   const x = permutator([0, 1])
   // console.log(x)
-  circuitValid = 0
+  let circuitValid = 0
   for (let i = 0; i < x.length; i++) {
     if (connectionMap.has("input0$latch" + x[i][0]) && connectionMap.has("clock0$latch" + x[i][0]) && connectionMap.has("latch" + x[i][0] + "$latch" + x[i][1]) && connectionMap.has("latch" + x[i][1] + "$output0") && connectionMap.has("clockbar0$latch" + x[i][1]) && (connectionMap.size === 5)) {
       circuitValid = 1
@@ -71,7 +66,7 @@ function flipflopValidate() {
   }
 }
 
-function changeObservation(htmlText, removedClass, addedClass) {
+export function changeObservation(htmlText, removedClass, addedClass) {
   document.getElementById("output-text").innerHTML = htmlText
   document.getElementById("output-text").classList.remove(removedClass)
   document.getElementById("output-text").classList.add(addedClass)

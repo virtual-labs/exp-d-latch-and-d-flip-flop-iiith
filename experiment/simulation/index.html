@@ -284,10 +284,9 @@
 					Observation
 				</div>
 				<div class="v-datalist-row" id="output-box">
-					<img id="graph-image" style="display:none" alt="Image of graph">
+					<img id="graph-image" src="" style="display:none" alt="Image of graph">
 				</div>
 				<div id="output-text">
-
 				</div>
 				<div class="v-datalist-row text-danger" id="error-container" style="display:none;">
 					Required no.of components of this type are already present in the workspace
@@ -296,38 +295,7 @@
 		</div>
 	</div>
 
-	<script>
-		const connectionMap = new Map();
-
-		const container = document.getElementById("diagram");
-		container.addEventListener("contextmenu", function (e) {
-			e.preventDefault();
-		});
-
-		const currentTab = { LATCH: 0, FLIPFLOP: 1 }
-		let selectedTab = currentTab.LATCH
-		const tabs = document.querySelectorAll('.v-tabs li');
-
-		tabs.forEach(tab => {
-			tab.addEventListener('click', () => {
-				tabs.forEach(item => item.classList.remove('is-active'));
-				tab.classList.add('is-active');
-
-				let parent = tab.parentNode;
-				selectedTab = Array.prototype.indexOf.call(parent.children, tab);
-			})
-		})
-
-	</script>
-
-	<script src="js/components.js"></script>
-	<script src="js/integrate.js"></script>
-	<script src="js/latchflipflop.js"></script>
-
-	<script>
-		comp2Input0()
-		comp2Output()
-	</script>
+	<script type="module" src="js/main.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.8-b/js/script.js"></script>
 </body>
 
