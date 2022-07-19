@@ -72,12 +72,6 @@ function inputDotsDisappear() {
         objectDisappear(inputDot);
     }
 }
-function inputDotsAppear() {
-    for (const inputDot of inputDots) {
-        objectAppear(inputDot);
-    }
-}
-
 
 // function to disappear the output text
 function outputDisappear() {
@@ -103,31 +97,40 @@ function allDisappear() {
     for (const object of objects) {
         fillColor(object, "#008000");
     }
+    fillColor(objects[1],"#808080");
+    fillColor(objects[2],"#808080");
 }
 
-function clockToZero(){
+function clockToZero() {
     changeTo0(243, 158, 1, 1);
     changeTo1(643, 158, 2, 2);
     setter(textInput[1].textContent, inputDots[1]);
     setter(textInput[2].textContent, inputDots[2]);
 }
-function clockToOne(){
+function clockToOne() {
     changeTo1(243, 158, 1, 1);
     changeTo0(643, 158, 2, 2);
-    setter(textInput[1].textContent, inputDots[1]);
     setter(textInput[2].textContent, inputDots[2]);
 }
 
 function setInput() {
-    if (textInput[0].textContent !== "0" && timeline.progress() === 0) {
-        changeTo0(-5, 525, 0, 0);
+    if (timeline.progress() === 0) {
+        if (textInput[0].textContent !== "0") {
+            changeTo0(-5, 525, 0, 0);
+        }
+        else{
+            changeTo1(-5, 525, 0, 0);
+        }
+        setter(textInput[0].textContent, inputDots[0]);
+        setter(textInput[0].textContent, inputDots[3]);
+        setter(textInput[0].textContent, inputDots[4]);
     }
-    else if (textInput[0].textContent !== "1" && timeline.progress() === 0) {
-        changeTo1(-5, 525, 0, 0);
+    else if (timeline.progress() === 1) {
+        observ.innerHTML = "Simulation has finished. Press Reset to start again";
     }
-    setter(textInput[0].textContent, inputDots[0]);
-    setter(textInput[0].textContent, inputDots[3]);
-    setter(textInput[0].textContent, inputDots[4]);
+    else {
+        observ.innerHTML = "Simulation has started wait for it to end";
+    }
 }
 
 function changeTo1(coordinateX, coordinateY, object, textObject) {
@@ -163,7 +166,7 @@ function setter(value, component) {
     if (value === "1") {
         unsetColor(component);
     }
-    else if (value === "0") {
+    else{
         setColor(component);
     }
 }
@@ -193,42 +196,40 @@ function simulationStatus() {
     if (!decide) {
         startCircuit();
     }
-    else if (decide) {
+    else{
         stopCircuit();
     }
 }
 function stopCircuit() {
-    if (timeline.time() !== 0 && timeline.progress() !== 1) {
+    if (timeline.progress() !== 1) {
         timeline.pause();
         observ.innerHTML = "Simulation has been stopped.";
         decide = false;
         status.innerHTML = "Start";
-        speed.selectedIndex = 0;
     }
-    else if (timeline.progress() === 1) {
+    else {
         observ.innerHTML = "Please Restart the simulation";
     }
 }
 function startCircuit() {
     if (circuitStarted) {
         timeline.play();
-        timeline.timeScale(1);
+        timeline.timeScale(parseInt(speed.value));
         observ.innerHTML = "Simulation has started";
         decide = true;
         status.innerHTML = "Pause";
-        speed.selectedIndex = 0;
     }
     else {
         if (textInput[0].textContent !== "2") {
             circuitStarted = true;
             timeline.play();
-            timeline.timeScale(1);
+            timeline.timeScale(parseInt(speed.value));
             observ.innerHTML = "Simulation has started.";
             decide = true;
             status.innerHTML = "Pause";
-            speed.selectedIndex = 0;
+
         }
-        else if(textInput[0].textContent === "2") {
+        else if (textInput[0].textContent === "2") {
             observ.innerHTML = "Please set the value of input D to either 0 or 1";
         }
         else if (timeline.progress() === 1) {
@@ -243,6 +244,11 @@ function initInputDots() {
         fillInputDots(inputDot, 200, 200, 15, "#FF0000");
         svg.append(inputDot);
     }
+}
+
+function disappearSimulator1() {
+    objectDisappear(inputDots[0]);
+    objectDisappear(inputDots[1]);
 }
 
 function simulator1() {
@@ -284,7 +290,12 @@ function simulator1() {
     }, 0);
 }
 
-function simulator2(){
+function disappearSimulator2() {
+    objectDisappear(inputDots[2]);
+    objectDisappear(inputDots[3]);
+}
+
+function simulator2() {
     observ.innerHTML = "CLock changed to 1";
     objectAppear(inputDots[2]);
     objectAppear(inputDots[3]);
@@ -322,7 +333,7 @@ function simulator2(){
         paused: false,
 
     }, 0);
-    
+
 }
 
 function simulator3() {
@@ -367,11 +378,11 @@ outputDisappear();
 // timeline.add(inputDotsAppear, 0);
 timeline.add(clockToZero, 0);
 timeline.add(simulator1, 0);
-timeline.add(inputDotsDisappear, 4);
 timeline.add(clockToOne, 5);
 timeline.add(simulator2, 5);
-timeline.add(inputDotsDisappear, 9);
+timeline.add(disappearSimulator1, 6);
 timeline.add(simulator3, 10);
+timeline.add(disappearSimulator2, 11);
 timeline.add(inputDotsDisappear, 14);
 timeline.add(outputHandler, 14);
 timeline.add(display, 14);

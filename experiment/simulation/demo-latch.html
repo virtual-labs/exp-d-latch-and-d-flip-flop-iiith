@@ -74,37 +74,37 @@
         <div class="column is-7-desktop is-12-tablet is-12-mobile">
             <div id="circuit-board">
                 <svg class="svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="120%" viewBox="-50 -15 1020 1000">
-                    <rect id="mux" x="300" y="150" width="150" height="250" class="gate-demo" />
+                    <rect id="mux" x="300" y="200" width="200" height="300" class="gate-demo" />
                     <g id="NOT">
                         <path id="path1NOT" class="gate-demo"
-                            d="M 550 280 L 550 250 L 590 280 L 550 310 L 550 280 " />
-                        <circle  cx="600" cy="280" r="10" class="gate-demo" />
+                            d="M 600 330 L 600 300 L 640 330 L 600 360 L 600 330 " />
+                        <circle  cx="650" cy="330" r="10" class="gate-demo" />
 
                     </g>
                     <g id="NOT">
                         <path id="path1NOT" class="gate-demo"
-                            d="M 350 530 L 350 500 L 390 530 L 350 560 L 350 530 " />
-                        <circle cx="400" cy="530" r="10" class="gate-demo"/>
+                            d="M 350 630 L 350 600 L 390 630 L 350 660 L 350 630 " />
+                        <circle cx="400" cy="630" r="10" class="gate-demo"/>
 
                     </g>
-                    <path id="path0" d="M 0 100 L 375 100 L 375 150" class="demo-wires" /><!--clk to mux-->
-                    <path id="path1" d="M 0 200 L 300 200 " class="demo-wires" /><!--input to mux-->
-                    <path id="path2" d="M 450 280 L 550 280" class="demo-wires" /><!--mux to not-->
-                    <path id="path3" d="M 610 280 L 900 280" class="demo-wires" /><!--not to output-->
-                    <path id="path4" d="M 610 280 L 610 450 L 300 450 L 300 530 L 350 530" class="demo-wires" /><!--not to not-->
-                    <path id="path5" d="M 410 530 L 610 530 L 610 650 L 200 650 L 200 350 L 300 350" class="demo-wires" /><!--not to mux-->
+                    <path id="path0" d="M 0 100 L 395 100 L 395 200" class="demo-wires" /><!--clk to mux-->
+                    <path id="path1" d="M 0 200 L 100 200 L 100 300 L 300 300" class="demo-wires" /><!--input to mux-->
+                    <path id="path2" d="M 500 330 L 600 330" class="demo-wires" /><!--mux to not-->
+                    <path id="path3" d="M 660 330 L 880 330" class="demo-wires" /><!--not to output-->
+                    <path id="path4" d="M 660 330 L 660 550 L 300 550 L 300 630 L 350 630" class="demo-wires" /><!--not to not-->
+                    <path id="path5" d="M 410 630 L 610 630 L 610 750 L 200 750 L 200 400 L 300 400" class="demo-wires" /><!--not to mux-->
 
 
-                    <circle id="clock" cx="0" cy="100" r="20" class="demo-circles" />
+                    <circle id="clock" cx="0" cy="100" r="20" class="demo-clock-circles" />
                     <circle id="input" cx="0" cy="200" r="20" onclick="setInput()" class="demo-circles" />
-                    <circle id="output" cx="900" cy="280" r="20" class="demo-circles" />
+                    <circle id="output" cx="900" cy="330" r="20" class="demo-circles" />
                     
 
                     <text class="demo-text" x="-20" y="250">Input</text>
                     <text class="demo-text" x="-20" y="70">CLOCK</text>
-                    <text class="demo-text" x="345" y="265">2*1</text>
-                    <text class="demo-text" x="340" y="290">MUX</text>
-                    <text class="demo-text" x="880" y="250">Output</text>
+                    <text class="demo-text" x="365" y="345">2*1</text>
+                    <text class="demo-text" x="360" y="370">MUX</text>
+                    <text class="demo-text" x="880" y="300">Output</text>
 
                 </svg>
             </div>
@@ -117,12 +117,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="menu">
-        <ul class="menu-options">
-            <li class="menu-option">Delete</li>
-            <li class="menu-option">Cancel</li>
-        </ul>
     </div>
     <script type="module" src="js/animation-latch.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.8-b/js/script.js"></script>

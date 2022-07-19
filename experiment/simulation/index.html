@@ -12,7 +12,7 @@
 </head>
 
 <body>
-	<div class="columns mt-2 is-variable is-1 is-centered is-flex is-flex-wrap-wrap">
+	<div class="columns mt-2 is-variable is-1 is-centered is-flex-wrap-wrap">
 		<div class="v-tabs">
 			<ul>
 				<li class="is-active">
@@ -30,24 +30,27 @@
 		</div>
 	</div>
 
-	<div class="columns is-centered is-flex">
-		<div class="column is-6-desktop is-10-tablet is-10-mobile">
-			<div class="v-collapsible-instruction-container">
-				<div class="v-collapsible is-size-5">Instructions</div>
-				<div class="v-content">
-					<ul style="list-style: disc;">
-						<li>Click or tap on an element in the tool bar to place it in the workspace</li>
-						<li>Double click on a wire to delete it</li>
-						<li>Double click on input element to change it's value</li>
-						<li>If you did anything wrong click on reset button</li>
-						<li>Select the appropriate tab and click on validate after completion of circuit</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
+	<div class="columns is-centered">
+        <div class="column">
+            <div class="v-collapsible-instruction-container v-instruction-container">
+                <div class="v-collapsible is-size-5" id="task-description">
+                    Instructions
+                </div>
+                <div class="v-content" style="text-align: left; padding-left: 10%; padding-right: 10%;">
+                    <ul style="list-style: disc;">
+                        <li>Click on components on the left side to add them to the circuit board.</li>
+                        <li>Drag and drop components to move them around, connect them using wires by dragging your
+                            cursor from one endpoint to another.</li>
+                        <li>Double click on a wire to delete it.</li>
+                        <li>Double click or long press on input element to change it's value</li>
+                        <li>Select the appropriate tab and click on validate after completion of circuit</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
-	<div class="columns is-variable is-1 is-centered is-flex is-flex-wrap-wrap">
+	<div class="columns is-variable is-1 is-centered is-flex-wrap-wrap">
 		<div id="start" class="column is-2-desktop is-2-tablet is-3-mobile center-content">
 			<button class="v-button" onclick="circuitValidate()">Validate</button>
 		</div>
@@ -56,7 +59,7 @@
 		</div>
 	</div>
 
-	<div class="columns is-variable is-1 is-centered is-flex is-flex-wrap-wrap">
+	<div class="columns is-variable is-1 is-centered is-flex-wrap-wrap">
 		<div class="column is-2-desktop is-3-tablet is-2-mobile center-content">
 			<div class="v-datalist-container">
 				<div class="v-datalist-title">
@@ -75,7 +78,8 @@
 											<foreignObject pointer-events="none" width="100%" height="100%"
 												requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
 												style="overflow: visible; text-align: left;">
-												<div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 78px; height: 1px; padding-top: 81px; margin-left: 22px;">
+												<div xmlns="http://www.w3.org/1999/xhtml"
+													style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 78px; height: 1px; padding-top: 81px; margin-left: 22px;">
 													<div data-drawio-colors="color: rgb(0, 0, 0); "
 														style="box-sizing: border-box; font-size: 0px; text-align: center;">
 														<div
@@ -84,8 +88,9 @@
 														</div>
 													</div>
 												</div>
-											</foreignObject><text x="61" y="85" fill="rgb(0, 0, 0)"
-												font-family="Helvetica" font-size="12px" text-anchor="middle">2 *
+											</foreignObject>
+											<text x="61" y="85" fill="rgb(0, 0, 0)" font-family="Helvetica"
+												font-size="12px" text-anchor="middle">2 *
 												1...</text>
 										</switch>
 									</g>
@@ -270,7 +275,7 @@
 			</div>
 		</div>
 		<div class="column is-7-desktop is-9-tablet is-10-mobile center-content">
-			<div class="is-flex is-flex-wrap-wrap center-content simulation-container" id="diagram">
+			<div class="is-flex-wrap-wrap center-content simulation-container" id="diagram">
 			</div>
 		</div>
 		<div class="column is-3-desktop is-8-tablet is-8-mobile center-content">
@@ -279,7 +284,7 @@
 					Observation
 				</div>
 				<div class="v-datalist-row" id="output-box">
-					<img src="" id="graph-image" style="display:none" alt="Image of graph">
+					<img id="graph-image" style="display:none" alt="Image of graph">
 				</div>
 				<div id="output-text">
 
