@@ -1,92 +1,52 @@
 [
-{"question":"1. What frequency clock source will produce clock waveforms having a period equal to 5 us (5 microseconds)? ",
-"answers":{
-            "a":"5 MHz",
-            "b":"0.2 MHz",
-            "c":"2 MHz",
-            "d":"10 MHz"
-          },
-"correctAnswer":"b"},
-            
-{"question":"2. On what parameters do the output of D flip flop depend?",
-"answers":{
-            "a":"Independent of both previous state and input",
-            "b":"Both on previous state and input",
-            "c":"Only on the previous state",
-            "d":"Only on input D"
-          },
-"correctAnswer":"d"},
-            
-    {"question":"3. The timing diagram corresponds to: <img src='images/d_latch_q.jpg'>",
-"answers":{
-            "a":"D latch",
-            "b":"Positive edge triggered D flip flop",
-            "c":"Negative edge triggered D flip flop ",
-            "d":"None of them"
-          },
-"correctAnswer":"a"},
-            
-{"question":" 4. The timing diagram corresponds to <img src='images/pos_edge_d.jpg'>",
-"answers":{
-            "a":"D latch",
-            "b":"Negative edge triggered flip flop",
-            "c":"Positive edge triggered",
-            "d":"None of them"
-          },
-"correctAnswer":"c"},           
-
-{"question":"5. Which statement is false about D latch",
-"answers":{
-            "a":"The output follows the input everytime",
-            "b":"The output follows the input when clock is high",
-            "c":"The output follows the input when the clock is low",
-            "d":"The output never follows the input"
-          },
-"correctAnswer":"b"},
-            
-{"question":"6. Which latch has the property of either retaining or toggling the previous value ",
-"answers":{
-            "a":"D-Latch",
-            "b":"T-Latch",
-            "c":"SR-Latch",
-            "d":"None of the above"
-          },
-"correctAnswer":"b"},
-            
-{"question":"7. Which statement below is the apt definition of flip flop",
-"answers":{
-            "a":"Latch",
-            "b":"Coupled latch",
-            "c":"De-coupled latch",
-            "d":"Clocked latch"
-          },
-"correctAnswer":"d"},
-            
-{"question":"8. The above figure is the gate level implementation of:",
-"answers":{
-            "a":"SR-Latch",
-            "b":"D-Latch",
-            "c":"T-Latch",
-            "d":"None of the above"
-          },
-"correctAnswer":"b"},
- 
-{"question":"9. What kind of flip flop is generally preffered for constructing counters?",
-"answers":{
-            "a":"J K-flip flop",
-            "b":"T flip flop",
-            "c":"D flip flop",
-            "d":"None of the above"
-          },
-"correctAnswer":"b"},
-            
-{"question":"10. What is meant by the problem of metastability in flip flop",
-"answers":{
-            "a":"The data and the control input changes at the instant of clock pulse",
-            "b":"The data and the control input does not change at all",
-            "c":"The clock input does not change at all",
-            "d":"None of the above"
-          },
-"correctAnswer":"a"}           
-            
+  {
+    "question": "1. What frequency clock source will produce clock waveforms having a period equal to 5 us (5 microseconds)? ",
+    "answers": {
+      "a": "5 MHz",
+      "b": "0.2 MHz",
+      "c": "2 MHz",
+      "d": "10 MHz"
+    },
+    "correctAnswer": "b"
+  },
+  {
+    "question": "2. On what parameters do the output of D flip flop depend?",
+    "answers": {
+      "a": "Independent of both previous state and input",
+      "b": "Both on previous state and input",
+      "c": "Only on the previous state",
+      "d": "Only on input D"
+    },
+    "correctAnswer": "d"
+  },
+  {
+    "question": "3. Which statement is false about D latch",
+    "answers": {
+      "a": "The output follows the input everytime",
+      "b": "The output follows the input when clock is high",
+      "c": "The output follows the input when the clock is low",
+      "d": "The output never follows the input"
+    },
+    "correctAnswer": "b"
+  },
+  {
+    "question": "4. Which latch has the property of either retaining or toggling the previous value ",
+    "answers": {
+      "a": "D-Latch",
+      "b": "T-Latch",
+      "c": "SR-Latch",
+      "d": "None of the above"
+    },
+    "correctAnswer": "b"
+  },
+  {
+    "question": "5. Which statement below is the apt definition of flip flop",
+    "answers": {
+      "a": "Latch",
+      "b": "Coupled latch",
+      "c": "De-coupled latch",
+      "d": "Clocked latch"
+    },
+    "correctAnswer": "d"
+  }
 ]

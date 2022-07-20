@@ -1,5 +1,5 @@
-import {connectionMap} from './main.js'
-
+import {connectionMap} from './main.js';
+'use strict';
 export const jsplumbInstance = jsPlumb.getInstance({
 
     container: diagram,
@@ -52,48 +52,48 @@ export function editConnectionMap() {
 }
 
 jsplumbInstance.bind("connection", () => {
-    editConnectionMap()
+    editConnectionMap();
 });
 
 jsplumbInstance.bind("dblclick", function (ci) {
 
     jsplumbInstance.deleteConnection(ci);
-    editConnectionMap()
+    editConnectionMap();
 
 });
 
 
 export function addInstanceInverter(id) {
-    addInstance(id, [1, 0.5, 1, 0], -1, true)
-    addInstance(id, [0, 0.5, -1, 0], -1, false)
+    addInstance(id, [1, 0.5, 1, 0], -1, true);
+    addInstance(id, [0, 0.5, -1, 0], -1, false);
 }
 
 export function addInstanceMux(id) {
-    addInstance(id, [1, 0.5, 1, 0], -1, true)
-    addInstance(id, [0.5, 0, 0, -1], -1, false)
-    addInstance(id, [0, 0.315, -1, 0], -1, false)
-    addInstance(id, [0, 0.615, -1, 0], -1, false)
+    addInstance(id, [1, 0.5, 1, 0], -1, true);
+    addInstance(id, [0.5, 0, 0, -1], -1, false);
+    addInstance(id, [0, 0.315, -1, 0], -1, false);
+    addInstance(id, [0, 0.615, -1, 0], -1, false);
 }
 
 export function addInstanceLatch(id) {
-    addInstance(id, [1, 0.5, 1, 0], -1, true)
-    addInstance(id, [0.5, 0, 0, -1], -1, false)
-    addInstance(id, [0, 0.5, -1, 0], -1, false)
+    addInstance(id, [1, 0.5, 1, 0], -1, true);
+    addInstance(id, [0.5, 0, 0, -1], -1, false);
+    addInstance(id, [0, 0.5, -1, 0], -1, false);
 }
 
 export function addInstanceClock(id) {
-    addInstance(id, [1, 0.25, 1, 0], -1, true)
+    addInstance(id, [1, 0.25, 1, 0], -1, true);
 }
 export function addInstanceClockbar(id) {
-    addInstance(id, [1, 0.25, 1, 0], -1, true)
+    addInstance(id, [1, 0.25, 1, 0], -1, true);
 }
 
 export function addInstanceFinalInput(id) {
-    addInstance(id, [1, 0.5, 1, 0], -1, true)
+    addInstance(id, [1, 0.5, 1, 0], -1, true);
 }
 
 export function addInstanceFinalOutput(id) {
-    addInstance(id, [0, 0.5, -1, 0], -1, false)
+    addInstance(id, [0, 0.5, -1, 0], -1, false);
 }
 
 export function addInstance(id, position, num, src) {

@@ -11,8 +11,8 @@ container.addEventListener("contextmenu", function (e) {
 
 const EMPTY = "";
 export let componentsList = [];
-export const currentTab = { LATCH: 0, FLIPFLOP: 1 }
-export let selectedTab = currentTab.LATCH
+export const currentTab = { LATCH: 0, FLIPFLOP: 1 };
+export let selectedTab = currentTab.LATCH;
 const tabs = document.querySelectorAll('.v-tabs li');
 
 tabs.forEach(tab => {
@@ -23,8 +23,8 @@ tabs.forEach(tab => {
         let parent = tab.parentNode;
         selectedTab = Array.prototype.indexOf.call(parent.children, tab);
         refreshWorkingArea();
-    })
-})
+    });
+});
 
 function emptyList() {
     for(const component of componentsList) {

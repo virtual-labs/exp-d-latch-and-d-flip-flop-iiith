@@ -153,5 +153,18 @@
   justify-content: flex-start;
 }
 
+.demo-text {
+  fill: black;
+  font-family:Helvetica;
+  font-size:14px
+}
+
+.demo-transistor {
+  fill: none;
+  stroke: rgb(0, 0, 0);
+  stroke-width: 3;
+  stroke-miterlimit: 10;
+  pointer-events: stroke;
+}
 
 /* 16 -> 1*/
