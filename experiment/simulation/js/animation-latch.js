@@ -201,7 +201,7 @@ function simulationStatus() {
 function stopCircuit() {
     if (timeline.progress() !== 1) {
         timeline.pause();
-        observ.innerHTML = "Simulation has been stopped.";
+        observ.innerHTML = "Simulation has been paused.";
         decide = false;
         status.innerHTML = "Start";
     }
