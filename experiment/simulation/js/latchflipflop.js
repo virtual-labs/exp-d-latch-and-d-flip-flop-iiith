@@ -17,7 +17,6 @@ export function latchValidate() {
     }
   }
   if (circuitValid) {
-    console.log(document.getElementById("graph-image"));
     document.getElementById("graph-image").src = "./images/screenshot_168.png";
     document.getElementById("graph-image").style.display = "block";
     changeObservation("&#10004; Circuit is correct", 'text-danger', 'text-success');

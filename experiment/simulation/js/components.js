@@ -37,7 +37,6 @@ function getWireColor(sourceId)  {
 export function editConnectionMap() {
     connectionMap.clear();
     jsplumbInstance.getAllConnections().forEach(connection => {
-        console.log(connection.sourceId);
         connection.setPaintStyle({
             stroke: getWireColor(connection.sourceId),
             strokeWidth: 3,
