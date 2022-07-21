@@ -10,7 +10,7 @@
         "correctAnswer": "b"
     },
     {
-        "question": "2. What kind of flip flop is generally preffered for constructing counters?",
+        "question": "2. What kind of flip flop is generally preferred for constructing counters?",
         "answers": {
             "a": "J K-flip flop",
             "b": "T flip flop",

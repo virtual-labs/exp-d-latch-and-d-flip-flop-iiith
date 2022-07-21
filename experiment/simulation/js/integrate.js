@@ -44,7 +44,7 @@ export function compInverter() {
     const id = "inverter" + count.Inverter;
     const divPushed = document.createElement('div');
     divPushed.innerHTML = `
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="-0.5 -0.5 84 53">
+        <svg xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" version="1.1" viewBox="-0.5 -0.5 84 53">
             <g class="demo-transistor">
                 <path d="M 1 26 L 21 26"/>
                 <path d="M 21 1 L 61 26 L 21 51 Z" />
@@ -71,13 +71,13 @@ export function compMux() {
     const id = "mux" + count.Mux;
     const divPushed = document.createElement('div');
     divPushed.innerHTML = `
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="-0.5 10 124 143">
+        <svg xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" version="1.1" viewBox="-0.5 10 124 143">
             <g class="demo-transistor">
                 <rect x="21" y="21" width="80" height="120"/>
                 <g transform="translate(-0.5 -0.5)">
                     <switch>
-                        <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
-                            <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 78px; height: 1px; padding-top: 81px; margin-left: 22px;">
+                        <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="https://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                            <div xmlns="https://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 78px; height: 1px; padding-top: 81px; margin-left: 22px;">
                                 <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
                                     <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">\
                                         <b style="font-size: 14px">2 * 1<br />I/O<br />MUX</b>
@@ -94,7 +94,7 @@ export function compMux() {
                 <path d="M 1 51 L 21 51"/>
             </g>
             <switch>
-                <g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/>
+                <g requiredFeatures="https://www.w3.org/TR/SVG11/feature#Extensibility"/>
                 <a transform="translate(0,-5)" xlink:href="https://www.diagrams.net/doc/faq/svg-export-text-problems" target="_blank">
                     <text text-anchor="middle" font-size="10px" x="50%" y="100%">Text is not SVG - cannot display</text>
                 </a>
@@ -119,13 +119,13 @@ export function compLatch() {
     const id = "latch" + count.Latch;
     const divPushed = document.createElement('div');
     divPushed.innerHTML = `
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="-0.5 10 124 143">
+        <svg xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" version="1.1" viewBox="-0.5 10 124 143">
             <g class="demo-transistor">
                 <rect x="21" y="21" width="80" height="120" fill="none" stroke="rgb(0, 0, 0)" stroke-width="3" pointer-events="all"/>
                 <g transform="translate(-0.5 -0.5)">
                     <switch>
-                        <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
-                            <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 78px; height: 1px; padding-top: 81px; margin-left: 22px;">
+                        <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="https://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                            <div xmlns="https://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 78px; height: 1px; padding-top: 81px; margin-left: 22px;">
                                 <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
                                     <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
                                         <b style="font-size: 14px">1 * 1<br />I/O<br />Latch</b>
@@ -141,7 +141,7 @@ export function compLatch() {
                 <path d="M 61 1 L 61 21" fill="none" stroke="rgb(0, 0, 0)" stroke-width="3" stroke-miterlimit="10" pointer-events="stroke"/>
             </g>
             <switch>
-                <g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/>
+                <g requiredFeatures="https://www.w3.org/TR/SVG11/feature#Extensibility"/>
                 <a transform="translate(0,-5)" xlink:href="https://www.diagrams.net/doc/faq/svg-export-text-problems" target="_blank">
                     <text text-anchor="middle" font-size="10px" x="50%" y="100%">Text is not SVG - cannot display</text>
                 </a>
@@ -166,7 +166,7 @@ export function compClock() {
     const id = "clock" + count.Clock;
     const divPushed = document.createElement('div');
     divPushed.innerHTML = `
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        <svg xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"
             version="1.1" viewBox="-0.5 -0.5 64 34">
             <g class="demo-transistor">
                 <path d="M 1 31 L 41 31" />
@@ -176,9 +176,9 @@ export function compClock() {
                 <g transform="translate(-0.5 -0.5)">
                     <switch>
                         <foreignObject pointer-events="none" width="100%" height="100%"
-                            requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+                            requiredFeatures="https://www.w3.org/TR/SVG11/feature#Extensibility"
                             style="overflow: visible; text-align: left;">
-                            <div xmlns="http://www.w3.org/1999/xhtml"
+                            <div xmlns="https://www.w3.org/1999/xhtml"
                                 style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 21px; margin-left: 23px;">
                                 <div data-drawio-colors="color: rgb(0, 0, 0); "
                                     style="box-sizing: border-box; font-size: 0px; text-align: center;">
@@ -194,7 +194,7 @@ export function compClock() {
                 </g>
             </g>
             <switch>
-                <g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" /><a
+                <g requiredFeatures="https://www.w3.org/TR/SVG11/feature#Extensibility" /><a
                     transform="translate(0,-5)"
                     xlink:href="https://www.diagrams.net/doc/faq/svg-export-text-problems"
                     target="_blank"><text text-anchor="middle" font-size="10px" x="50%"
@@ -219,7 +219,7 @@ export function compClockbar() {
     const id = "clockbar" + count.Clockbar;
     const divPushed = document.createElement('div');
     divPushed.innerHTML = `
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="-0.5 -0.5 64 34">
+        <svg xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" version="1.1" viewBox="-0.5 -0.5 64 34">
             <g class="demo-transistor">
                 <path d="M 1 31 L 41 31" />
                 <path d="M 1 1 L 61 1" />
@@ -228,9 +228,9 @@ export function compClockbar() {
                 <g transform="translate(-0.5 -0.5)">
                     <switch>
                         <foreignObject pointer-events="none" width="100%" height="100%"
-                            requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+                            requiredFeatures="https://www.w3.org/TR/SVG11/feature#Extensibility"
                             style="overflow: visible; text-align: left;">
-                            <div xmlns="http://www.w3.org/1999/xhtml"
+                            <div xmlns="https://www.w3.org/1999/xhtml"
                                 style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 21px; margin-left: 23px;">
                                 <div data-drawio-colors="color: rgb(0, 0, 0); "
                                     style="box-sizing: border-box; font-size: 0px; text-align: center;">
@@ -246,7 +246,7 @@ export function compClockbar() {
                 </g>
             </g>
             <switch>
-                <g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" /><a
+                <g requiredFeatures="https://www.w3.org/TR/SVG11/feature#Extensibility" /><a
                     transform="translate(0,-5)"
                     xlink:href="https://www.diagrams.net/doc/faq/svg-export-text-problems"
                     target="_blank"><text text-anchor="middle" font-size="10px" x="50%"

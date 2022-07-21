@@ -20,7 +20,7 @@
     "correctAnswer": "d"
   },
   {
-    "question": "3. Which statement is false about D latch",
+    "question": "3. Which statement is true about D latch",
     "answers": {
       "a": "The output follows the input everytime",
       "b": "The output follows the input when clock is high",
