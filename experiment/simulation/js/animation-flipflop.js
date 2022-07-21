@@ -232,9 +232,6 @@ function startCircuit() {
         else if (textInput[0].textContent === "2") {
             observ.innerHTML = "Please set the value of input D to either 0 or 1";
         }
-        else if (timeline.progress() === 1) {
-            observ.innerHTML = "Please Restart the simulation";
-        }
     }
 }
 
