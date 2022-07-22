@@ -3,7 +3,7 @@ import { connectionMap } from "./main.js";
 function checkConnectionsLatch(x, i) {
   return (connectionMap.has("input0$mux0") && connectionMap.has("clock0$mux0")
     && connectionMap.has("inverter" + x[i][1] + "$mux0") && connectionMap.has("mux0$inverter" + x[i][0])
-    && connectionMap.has("inverter0$inverter" + x[i][1]) && connectionMap.has("inverter" + x[i][0] + "$output0")
+    && connectionMap.has("inverter" + x[i][0] + "$inverter" + x[i][1]) && connectionMap.has("inverter" + x[i][0] + "$output0")
     && (connectionMap.size === 6))
 }
 export function latchValidate() {
