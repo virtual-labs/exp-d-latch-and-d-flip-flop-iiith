@@ -12,7 +12,6 @@
   border-radius: 0.625rem;
   border: 0.125rem solid green;
   width: 5rem;
-  /* width: 7rem; */
   min-height: 4.75rem;
   text-align: center;
   cursor: move;
@@ -24,7 +23,6 @@
 #diagram .component2 {
   border-radius: 0.625rem;
   border: 0.125rem solid green;
-  /* width: 5rem; */
   width: 7rem;
   min-height: 4.75rem;
   text-align: center;
@@ -89,7 +87,7 @@
 
 .each-toolbar-component {
   padding: 0.625rem;
-  font-size: 0.9rem ;
+  font-size: 0.9rem;
 }
 
 .svg-component {
@@ -110,20 +108,24 @@
   text-align: center;
 }
 
+
 @media screen and (max-width: 600px) {
   .toolbar-component {
     width: 60px;
     height: 80px;
     background-size: 100%;
   }
+
   #diagram .component {
     width: 3.125rem;
-    min-height: 2.96875rem;
+    min-height: 2.96rem;
   }
+
   #diagram .component2 {
     width: 4.375rem;
-    min-height: 2.96875rem;
+    min-height: 2.96rem;
   }
+
   .each-toolbar-component {
     font-size: 0.7rem;
   }
@@ -133,17 +135,19 @@
 @media screen and (min-width: 601px) and (max-width: 1023px) {
   #diagram .component {
     width: 4.375rem;
-    min-height: 4.15625rem;
+    min-height: 4.15rem;
   }
+
   #diagram .component2 {
     width: 6.125rem;
-    min-height: 4.15625rem;
+    min-height: 4.15rem;
   }
 
 }
 
 #output-box{
   overflow: auto;
+  min-height: 70%;
 }
 
 .v-instruction-container {
@@ -164,5 +168,3 @@
   stroke-miterlimit: 10;
   pointer-events: stroke;
 }
-
-/* 16 -> 1*/
