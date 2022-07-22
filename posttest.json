@@ -1,0 +1,52 @@
+[
+    {
+        "question": "1. The above figure is the gate level implementation of:",
+        "answers": {
+            "a": "SR-Latch",
+            "b": "D-Latch",
+            "c": "T-Latch",
+            "d": "None of the above"
+        },
+        "correctAnswer": "b"
+    },
+    {
+        "question": "2. What kind of flip flop is generally preferred for constructing counters?",
+        "answers": {
+            "a": "J K-flip flop",
+            "b": "T flip flop",
+            "c": "D flip flop",
+            "d": "None of the above"
+        },
+        "correctAnswer": "b"
+    },
+    {
+        "question": "3. What is meant by the problem of metastability in flip flop",
+        "answers": {
+            "a": "The data and the control input changes at the instant of clock pulse",
+            "b": "The data and the control input does not change at all",
+            "c": "The clock input does not change at all",
+            "d": "None of the above"
+        },
+        "correctAnswer": "a"
+    },
+    {
+        "question": "4. Mankar is doing an experiment on 8*1 Mux where the inputs are from i0 to i7. The value of s1,s0 and s2 are 1,0,1 respectively. The output of the mux is:",
+        "answers": {
+            "a": "i5",
+            "b": "i6",
+            "c": "i7",
+            "d": "None of the above"
+        },
+        "correctAnswer": "b"
+    },
+    {
+        "question": "5. How many D-Latchs are required to implement a D-Flip Flop?",
+        "answers": {
+            "a": "1",
+            "b": "0",
+            "c": "3",
+            "d": "2"
+        },
+        "correctAnswer": "d"
+    }
+]

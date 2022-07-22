@@ -1,0 +1,52 @@
+[
+  {
+    "question": "1. What frequency clock source will produce clock waveforms having a period equal to 5 us (5 microseconds)? ",
+    "answers": {
+      "a": "5 MHz",
+      "b": "0.2 MHz",
+      "c": "2 MHz",
+      "d": "10 MHz"
+    },
+    "correctAnswer": "b"
+  },
+  {
+    "question": "2. On what parameters do the output of D flip flop depend?",
+    "answers": {
+      "a": "Independent of both previous state and input",
+      "b": "Both on previous state and input",
+      "c": "Only on the previous state",
+      "d": "Only on input D"
+    },
+    "correctAnswer": "d"
+  },
+  {
+    "question": "3. Which statement is true about D latch",
+    "answers": {
+      "a": "The output follows the input everytime",
+      "b": "The output follows the input when clock is high",
+      "c": "The output follows the input when the clock is low",
+      "d": "The output never follows the input"
+    },
+    "correctAnswer": "b"
+  },
+  {
+    "question": "4. Which latch has the property of either retaining or toggling the previous value ",
+    "answers": {
+      "a": "D-Latch",
+      "b": "T-Latch",
+      "c": "SR-Latch",
+      "d": "None of the above"
+    },
+    "correctAnswer": "b"
+  },
+  {
+    "question": "5. Which statement below is the apt definition of flip flop",
+    "answers": {
+      "a": "Latch",
+      "b": "Coupled latch",
+      "c": "De-coupled latch",
+      "d": "Clocked latch"
+    },
+    "correctAnswer": "d"
+  }
+]
