@@ -3,7 +3,7 @@ import { connectionMap } from "./main.js";
 function checkConnectionsLatch(x, i) {
   return (connectionMap.has("input0$mux0") && connectionMap.has("clock0$mux0")
     && connectionMap.has("inverter" + x[i][1] + "$mux0") && connectionMap.has("mux0$inverter" + x[i][0])
-    && connectionMap.has("inverter0$inverter" + x[i][1]) && connectionMap.has("inverter" + x[i][0] + "$output0")
+    && connectionMap.has("inverter" + x[i][0] + "$inverter" + x[i][1]) && connectionMap.has("inverter" + x[i][0] + "$output0")
     && (connectionMap.size === 6))
 }
 export function latchValidate() {
@@ -32,22 +32,21 @@ export function permutator(inputArr) {
 
   function permute(arr, memo) {
     let cur;
+        memo = memo || [];
 
-    memo = memo || [];
+        for (let i = 0; i < arr.length; i++) {
+            currentCase = arr.splice(i, 1);
+            if (arr.length === 0) {
+                results.push(memo.concat(currentCase));
+            }
+            permute(arr.slice(), memo.concat(currentCase));
+            arr.splice(i, 0, currentCase[0]);
+        }
 
-    for (let i = 0; i < arr.length; i++) {
-      cur = arr.splice(i, 1);
-      if (arr.length === 0) {
-        results.push(memo.concat(cur));
-      }
-      permute(arr.slice(), memo.concat(cur));
-      arr.splice(i, 0, cur[0]);
+        return results;
     }
 
-    return results;
-  }
-
-  return permute(inputArr);
+    return permute(inputArr);
 }
 function checkConnectionsFlipFlop(x, i) {
   return (connectionMap.has("input0$latch" + x[i][0]) && connectionMap.has("clock0$latch" + x[i][0])

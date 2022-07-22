@@ -210,6 +210,7 @@ export function compClock() {
     addInstanceClock(id);
     componentsList.push(divPushed);
 }
+
 export function compClockbar() {
     maxCount.Clockbar -= 1;
     if (maxCount.Clockbar < 0) {

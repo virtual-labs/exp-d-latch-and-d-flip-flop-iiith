@@ -1,7 +1,6 @@
 import {connectionMap} from './main.js';
 'use strict';
 export const jsplumbInstance = jsPlumb.getInstance({
-
     container: diagram,
     maxConnections: -1,
     endpoint: {
@@ -16,6 +15,7 @@ export const jsplumbInstance = jsPlumb.getInstance({
     paintStyle: { strokeWidth: 3, stroke: "#456" },
     connectionsDetachable: true,
 });
+
 jsplumbInstance.bind("ready", function () {
     jsplumbInstance.registerConnectionTypes({
         "red-connection": {
@@ -61,7 +61,6 @@ jsplumbInstance.bind("dblclick", function (ci) {
 
 });
 
-
 export function addInstanceInverter(id) {
     addInstance(id, [1, 0.5, 1, 0], -1, true);
     addInstance(id, [0, 0.5, -1, 0], -1, false);
@@ -83,6 +82,7 @@ export function addInstanceLatch(id) {
 export function addInstanceClock(id) {
     addInstance(id, [1, 0.25, 1, 0], -1, true);
 }
+
 export function addInstanceClockbar(id) {
     addInstance(id, [1, 0.25, 1, 0], -1, true);
 }
