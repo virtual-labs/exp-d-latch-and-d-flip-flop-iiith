@@ -1,6 +1,6 @@
 [
     {
-        "question": "1. The above figure is the gate level implementation of:",
+        "question": " 1. <img src='images/d_ff_clk0.jpg'> <br> The above figure is the gate level implementation of:",
         "answers": {
             "a": "SR-Latch",
             "b": "D-Latch",
@@ -40,7 +40,7 @@
         "correctAnswer": "b"
     },
     {
-        "question": "5. How many D-Latchs are required to implement a D-Flip Flop?",
+        "question": "5. How many D-Latches are required to implement a D-Flip Flop?",
         "answers": {
             "a": "1",
             "b": "0",

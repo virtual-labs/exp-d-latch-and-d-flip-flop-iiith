@@ -6,7 +6,7 @@ With the definition of D latch and D flip-flop(given in the introduction) and th
 
 <img src="images/d_latch_clk1.jpg">  
 
-When clock is 1 the pass transistor in red is on (the input to the gate of nmos is 1 and to the gate of pmos is 0) therefore the output is D as D changes the output changes accordingly. The two inverters act as a buffer.  
+When clock is 1 the pass transistor in red is on (the input to the gate of nmos is 1 and to the gate of pmos is 0) therefore the output is D. As D changes the output changes accordingly. The two inverters act as a buffer.  
 
 **Working of the latch when clock is 0.**  
 
@@ -28,9 +28,9 @@ As evident from the figure when clk is 0 the input D passes through the first le
 
 <img src="images/d_ff_clk1.jpg">  
 
-When the clock input becomes 1, D(at that instant) is transferred to the output. Thereafter output Q does not change when D changes because D is not passed through the first level of pass transistor logic (as seen in the diagram). Now when the clock changes back to 1, Q still remains unaffected by the changes in D because it is now hindered by the second level of pass transistor. Thus we observe that Q remains unchanged for the entire clock cycle and changes only at the positive edge. Hence the above transistor level diagram implements positive edge triggered flip flop.  
+When the clock input becomes 1, D(at that instant) is transferred to the output. Thereafter output Q does not change when D changes because D is not passed through the first level of pass transistor logic (as seen in the diagram). Now when the clock changes back to 0, Q still remains unaffected by the changes in D because it is now hindered by the second level of pass transistor. Thus we observe that Q remains unchanged for the entire clock cycle and changes only at the positive edge. Hence the above transistor level diagram implements positive edge triggered flip flop.  
 
 
 **APPLICATION AND ADVANTAGES OF D- FLIP FLOP**
 
-D flip flop can be considered as a basic memory cell because it stores the value on the data line with the advantage of the output being synchronised to a clock. D flip flops form the basis of shift registers that are used in many electronic device. Many logic synthesis tool use only D flip flop or D latch. FPGA contains edge triggered flip flops. D flip flops are also used in finite state machines.   
+D flip flop can be considered as a basic memory cell because it stores the value on the data line with the advantage of the output being synchronised to a clock. D flip flops form the basis of shift registers that are used in many electronic devices. Many logic synthesis tools use only D flip flop or D latch. FPGA contains edge triggered flip flops. D flip flops are also used in finite state machines.   

@@ -293,7 +293,7 @@ function disappearSimulator2() {
 }
 
 function simulator2() {
-    observ.innerHTML = "CLock changed to 1";
+    observ.innerHTML = "Clock changed to 1";
     objectAppear(inputDots[2]);
     objectAppear(inputDots[3]);
     timeline.to(inputDots[2], {
@@ -334,7 +334,7 @@ function simulator2() {
 }
 
 function simulator3() {
-    observ.innerHTML = "Observ the positive edge triggered nature of the flip-flop";
+    observ.innerHTML = "Observe the positive edge triggered nature of the flip-flop";
     objectAppear(inputDots[4]);
     timeline.to(inputDots[4], {
         motionPath: {
@@ -377,9 +377,9 @@ timeline.add(clockToZero, 0);
 timeline.add(simulator1, 0);
 timeline.add(clockToOne, 5);
 timeline.add(simulator2, 5);
-timeline.add(disappearSimulator1, 6);
+timeline.add(disappearSimulator1, 5);
 timeline.add(simulator3, 10);
-timeline.add(disappearSimulator2, 11);
+timeline.add(disappearSimulator2, 10);
 timeline.add(inputDotsDisappear, 14);
 timeline.add(outputHandler, 14);
 timeline.add(display, 14);

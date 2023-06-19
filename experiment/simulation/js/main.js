@@ -26,6 +26,8 @@ tabs.forEach(tab => {
     });
 });
 
+window.refreshWorkingArea = refreshWorkingArea;
+
 function emptyList() {
     for(const component of componentsList) {
         let elem = document.getElementById(component.id);

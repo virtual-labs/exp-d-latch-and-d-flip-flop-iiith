@@ -31,7 +31,7 @@ export function permutator(inputArr) {
   const results = [];
 
   function permute(arr, memo) {
-    let cur;
+    let currentCase;
         memo = memo || [];
 
         for (let i = 0; i < arr.length; i++) {
