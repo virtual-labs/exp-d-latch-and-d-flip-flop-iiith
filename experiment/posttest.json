@@ -1,4 +1,6 @@
-[
+{
+    "version": 2.0,
+    "questions": [
     {
         "question": " 1. <img src='images/d_ff_clk0.jpg'> <br> The above figure is the gate level implementation of:",
         "answers": {
@@ -7,7 +9,13 @@
             "c": "T-Latch",
             "d": "None of the above"
         },
-        "correctAnswer": "b"
+        "correctAnswer": "b",
+        "explanations": {
+          "a":"",
+          "b":"",
+          "c":"",
+          "d":""},
+      "difficulty": "intermediate"
     },
     {
         "question": "2. What kind of flip flop is generally preferred for constructing counters?",
@@ -17,7 +25,13 @@
             "c": "D flip flop",
             "d": "None of the above"
         },
-        "correctAnswer": "b"
+        "correctAnswer": "b",
+        "explanations": {
+          "a":"",
+          "b":"",
+          "c":"",
+          "d":""},
+      "difficulty": "beginner"
     },
     {
         "question": "3. What is meant by the problem of metastability in flip flop",
@@ -27,7 +41,13 @@
             "c": "The clock input does not change at all",
             "d": "None of the above"
         },
-        "correctAnswer": "a"
+        "correctAnswer": "a",
+        "explanations": {
+          "a":"",
+          "b":"",
+          "c":"",
+          "d":""},
+      "difficulty": "intermediate"
     },
     {
         "question": "4. Mankar is doing an experiment on 8*1 Mux where the inputs are from i0 to i7. The value of s1,s0 and s2 are 1,0,1 respectively. The output of the mux is:",
@@ -37,7 +57,13 @@
             "c": "i7",
             "d": "None of the above"
         },
-        "correctAnswer": "b"
+        "correctAnswer": "b",
+        "explanations": {
+          "a":"",
+          "b":"",
+          "c":"",
+          "d":""},
+      "difficulty": "advanced"
     },
     {
         "question": "5. How many D-Latches are required to implement a D-Flip Flop?",
@@ -47,6 +73,13 @@
             "c": "3",
             "d": "2"
         },
-        "correctAnswer": "d"
+        "correctAnswer": "d",
+        "explanations": {
+          "a":"",
+          "b":"",
+          "c":"",
+          "d":""},
+      "difficulty": "beginner"
     }
 ]
+}
