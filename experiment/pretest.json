@@ -11,10 +11,10 @@
     },
     "correctAnswer": "b",
     "explanations": {
-      "a":"",
-      "b":"",
-      "c":"",
-      "d":""},
+      "a":"To calculate the period of a waveform, we use the formula T = 1/f, where T is the period and f is the frequency. In this case, T = 1/5 MHz = 0.2 microseconds. Since the desired period is 5 microseconds, 5 MHz would not produce the correct waveform.",
+      "b":"Calculating the period using T = 1/f, we get T = 1/0.2 MHz = 5 microseconds. Therefore, a clock source with a frequency of 0.2 MHz would produce clock waveforms with a period equal to 5 microseconds.",
+      "c":"Frequency of 2 MHz would result in a period of 0.5 microseconds (T = 1/2 MHz = 0.5 microseconds), which is not the desired period of 5 microseconds.",
+      "d":"Using the formula T = 1/f, a frequency of 10 MHz would yield a period of 0.1 microseconds (T = 1/10 MHz = 0.1 microseconds), which is not the desired period of 5 microseconds."},
   "difficulty": "advanced"
   },
   {
@@ -27,10 +27,10 @@
     },
     "correctAnswer": "d",
     "explanations": {
-      "a":"",
-      "b":"",
-      "c":"",
-      "d":""},
+      "a":" The output of a D flip flop is not independent of both the previous state and the input. The output is influenced by these factors.",
+      "c":"The output of a D flip flop is not dependent on the previous state.",
+      "b":"One or both are wrong",
+      "d":"The flip flop stores and outputs the value of the D input during the appropriate clock edge transition."},
   "difficulty": "beginner"
   },
   {
@@ -43,10 +43,10 @@
     },
     "correctAnswer": "b",
     "explanations": {
-      "a":"",
-      "b":"",
-      "c":"",
-      "d":""},
+      "a":"In a D latch, the output does not necessarily follow the input every time. The output state is only updated when the clock signal is in a particular state",
+      "b":"In a D latch, the output is updated and follows the input signal when the clock signal is high",
+      "c":"When the clock signal is low, the output retains its previous state.",
+      "d":"In a D latch, the output does follow the input at some time."},
   "difficulty": "intermediate"
   },
   {
@@ -59,10 +59,10 @@
     },
     "correctAnswer": "b",
     "explanations": {
-      "a":"",
-      "b":"",
-      "c":"",
-      "d":""},
+      "a":"The output of a D-latch follows the input value when the clock signal is high, but it retains its previous state when the clock signal is low.",
+      "b":"A T-latch, also known as a Toggle latch or T flip-flop, has the property of either retaining or toggling the previous value. It has a toggle input (T) which, when activated, toggles the output between its current state and the opposite state. When the toggle input is inactive, the output retains its previous value.",
+      "c":"It has two inputs (Set and Reset) that can be used to set or reset the latch to specific states, but it does not toggle the output based on the previous value.",
+      "d":"One of the above is correct."},
   "difficulty": "intermediate"
   },
   {
@@ -75,10 +75,10 @@
     },
     "correctAnswer": "d",
     "explanations": {
-      "a":"",
-      "b":"",
-      "c":"",
-      "d":""},
+      "a":"Flip flops are more complex and have additional features like clock inputs.",
+      "b":"It might refer to a latch that is connected or coupled to another latch, but it doesn't accurately define a flip flop.",
+      "c":"It could imply a latch that is isolated or disconnected from other components, but it doesn't specifically define a flip flop.",
+      "d":"A clocked latch, also known as a flip flop, is a sequential logic circuit that can store one bit of information and is controlled by a clock signal. The clock input allows the flip flop to synchronize its operations with other components in a digital system, enabling precise timing and sequencing of data"},
   "difficulty": "beginner"
   }
 ]
