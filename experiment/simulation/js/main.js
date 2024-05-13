@@ -1,5 +1,5 @@
 'use strict';
-import { comp2Input0, comp2Output, resetCounts } from "./integrate.js";
+import { comp2Input0, comp2Input1, comp2Output, resetCounts } from "./integrate.js";
 import { jsplumbInstance, editConnectionMap } from "./components.js";
 
 export const connectionMap = new Map();
@@ -11,7 +11,7 @@ container.addEventListener("contextmenu", function (e) {
 
 const EMPTY = "";
 export let componentsList = [];
-export const currentTab = { LATCH: 0, NEG_FLIPFLOP: 1, POS_FLIPFLOP: 2 };
+export const currentTab = { LATCH: 0, NEG_FLIPFLOP: 1, POS_FLIPFLOP: 2, JK: 3 };
 export let selectedTab = currentTab.LATCH;
 const tabs = document.querySelectorAll('.v-tabs li');
 
@@ -33,7 +33,7 @@ const updateInputStream = () => {
     const task = selectedTab;
     let options = ""; 
     let instruction =""
-    if (task === 0) {
+    if (task === 0 || task === 3) {
       options = `<div class="columns is-centered" >
       <div class="column" style="margin:auto;text-align:center">
       <button class="v-button" onclick="circuitValidate()">Validate</button>
@@ -92,6 +92,7 @@ export function refreshWorkingArea() {
     resetCounts();
     refreshObservations();
     comp2Input0();
+    comp2Input1();
     comp2Output();
 }
 refreshWorkingArea();
