@@ -2,7 +2,7 @@
 import { componentsList, selectedTab, currentTab } from './main.js';
 import { addInstanceClock, addInstanceClockbar, addInstanceFinalInput, addInstanceInverter, addInstanceLatch, addInstanceMux, addInstanceFinalOutput } from './components.js';
 import { jsplumbInstance } from "./components.js";
-import { latchValidate, flipflopValidate } from "./latchflipflop.js";
+import { latchValidate, flipflopValidate, JKFFValidate } from "./latchflipflop.js";
 
 window.compInverter = compInverter;
 window.compMux = compMux;
@@ -19,6 +19,9 @@ export function resetCounts() {
     if (selectedTab === currentTab.LATCH) {
         maxCount = { PMOS: 0, NMOS: 0, VDD: 0, Ground: 0, Inverter: 2, Mux: 1, Latch: 0, Transistor: 0, Clock: 1, Clockbar: 0 };
     }
+    else if (selectedTab === currentTab.JK) {
+        maxCount = { PMOS: 0, NMOS: 0, VDD: 0, Ground: 0, Inverter: 1, Mux: 1, Latch: 2, Transistor: 0, Clock: 1, Clockbar: 1 };
+    }
     else {
         maxCount = { PMOS: 0, NMOS: 0, VDD: 0, Ground: 0, Inverter: 0, Mux: 0, Latch: 2, Transistor: 0, Clock: 1, Clockbar: 1 };
     }
@@ -28,6 +31,9 @@ export function resetCounts() {
 export function circuitValidate() {
     if (selectedTab === currentTab.LATCH) {
         latchValidate();
+    }
+    else if(selectedTab === currentTab.JK) {
+        JKFFValidate();
     }
     else {
         flipflopValidate();
@@ -267,7 +273,12 @@ export function compClockbar() {
 export function comp2Input0() {
     const id = "input0";
     const divPushed = document.createElement('div');
-    divPushed.innerHTML = 'Input 1<br><br>';
+    if (selectedTab === currentTab.JK)
+    divPushed.innerHTML = 'J<br><br>';
+    else if(selectedTab === currentTab.LATCH)
+    divPushed.innerHTML = 'Input<br><br>';
+    else
+    divPushed.innerHTML = 'D<br><br>';
     divPushed.id = id;
     divPushed.className = 'io-component';
     divPushed.style.top = "1.25rem";
@@ -277,6 +288,24 @@ export function comp2Input0() {
     jsplumbInstance.draggable(id, { "containment": true });
     addInstanceFinalInput(id);
     componentsList.push(divPushed);
+}
+
+export function comp2Input1() {
+    if(selectedTab===currentTab.JK)
+    {
+        const id = "input1";
+        const svgElement = document.createElement('div');
+        svgElement.innerHTML = 'K<br><br>';
+        svgElement.id = id;
+        svgElement.className = 'io-component';
+        svgElement.style.top = "5.25rem";
+        svgElement.style.left = "0.625rem";
+        const container = document.getElementById("diagram");
+        container.insertAdjacentElement("afterbegin", svgElement);
+        jsplumbInstance.draggable(id, { "containment": true });
+        addInstanceFinalInput(id);
+        componentsList.push(svgElement);
+    }
 }
 
 export function comp2Output() {
