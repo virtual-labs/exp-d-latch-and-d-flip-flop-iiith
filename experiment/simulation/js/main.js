@@ -41,9 +41,9 @@ const updateInputStream = () => {
   </div>
   </div>`;
     } else {
-      options = `<div class="columns is-variable is-1 is-centered is-flex is-flex-wrap-wrap my-0">
+      options = `<div class="columns is-variable is-1 is-centered is-flex is-flex-wrap-wrap my-1">
       <div class="column is-2-desktop is-2-tablet is-3-mobile center-content">
-          <div class="v-select">
+          <div class="v-select" style="border: 0.8px solid black;">
             <select id="input-selector">
                   <option value="1">Input wave 1</option>
                   <option value="2">Input wave 2</option>
