@@ -1,0 +1,90 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": " 1. <img src='images/d_ff_clk0.jpg'> <br> The above figure is the gate level implementation of:",
+      "answers": {
+        "a": "SR-Latch",
+        "b": "D-Latch",
+        "c": "T-Latch",
+        "d": "None of the above"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. The SR-Latch is not implemented with the gate configuration shown in the figure.",
+        "b": "Correct. The figure shows the gate-level implementation of a D-Latch.",
+        "c": "Incorrect. The T-Latch has a different gate arrangement than shown.",
+        "d": "Incorrect. The figure corresponds to a specific latch type, not none of the above."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "2. What kind of flip flop is generally preferred for constructing counters?",
+      "answers": {
+        "a": "J K-flip flop",
+        "b": "T flip flop",
+        "c": "D flip flop",
+        "d": "None of the above"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. K-flip flops have an additional input, the 'K' input, which can be used to control the toggling behavior of the flip flop. However, this added flexibility can also introduce complexity and potential for errors in counter designs. Therefore, J K-flip flops are not the most commonly preferred choice for constructing counters.",
+        "b": "Correct. T flip flops are preferred for counters due to their simple toggling behavior.",
+        "c": "Incorrect. D flip flops are not directly used for counters without extra logic.",
+        "d": "Incorrect. There is a correct option among the above choices."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. What is meant by the problem of metastability in flip flop",
+      "answers": {
+        "a": "The data and the control input changes at the instant of clock pulse",
+        "b": "The data and the control input does not change at all",
+        "c": "The clock input does not change at all",
+        "d": "None of the above"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. In a flip flop, metastability refers to a condition where the inputs (data and control) change close to the rising or falling edge of the clock pulse. When this happens, the flip flop can enter an unpredictable state, and the output becomes uncertain for a brief period. Metastability can occur due to setup and hold time violations, where the inputs change too close to the clock edge, making it difficult for the flip flop to latch the correct values.",
+        "b": "Incorrect. Metastability is not about inputs never changing; it is about timing violations near the clock edge.",
+        "c": "Incorrect. The clock input not changing does not cause metastability; it is the timing of input changes.",
+        "d": "Incorrect. There is a correct option among the above choices."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "4. Mankar is doing an experiment on 8*1 Mux where the inputs are from i0 to i7. The value of s1,s0 and s2 are 1,0,1 respectively. The output of the mux is:",
+      "answers": {
+        "a": "i5",
+        "b": "i6",
+        "c": "i7",
+        "d": "None of the above"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. The selector values do not correspond to i5.",
+        "b": "Correct. The selector values s2=1, s1=1, s0=0 correspond to i6 as output.",
+        "c": "Incorrect. The selector values do not correspond to i7.",
+        "d": "Incorrect. There is a correct option among the above choices."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "5. How many D-Latches are required to implement a D-Flip Flop?",
+      "answers": {
+        "a": "1",
+        "b": "0",
+        "c": "3",
+        "d": "2"
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect. A D-Latch is a level-sensitive device, while a D-Flip Flop is an edge-triggered device. They have different functionalities and cannot be directly substituted for each other.",
+        "b": "Incorrect. A D-Flip Flop cannot be implemented without D-Latches.",
+        "c": "Incorrect. Three D-Latches are not typically required for a D-Flip Flop.",
+        "d": "Correct. Two D-Latches are required to implement a D-Flip Flop: one as master and one as slave."
+      },
+      "difficulty": "beginner"
+    }
+  ]
+}
