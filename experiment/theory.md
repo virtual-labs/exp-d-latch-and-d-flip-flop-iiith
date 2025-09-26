@@ -31,8 +31,6 @@ From the timing diagram, the output Q changes only at the positive edge. At each
 1. When a circuit is edge triggered the output can change only on the rising or falling edge of the clock. But in the case of level-clocked, the output can change when the clock is high (or low).
 2. In edge triggering output can change only at one instant during the clock cycle; with level clocking output can change during an entire half cycle of the clock.
 
-...existing code...
-
 <img src="images/d_latch.jpg">
 
 **Working of the latch when clock is 1.**

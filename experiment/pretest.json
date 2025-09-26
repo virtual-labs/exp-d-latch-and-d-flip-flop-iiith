@@ -1,85 +1,90 @@
 {
-    "version": 2.0,
-    "questions": [
-  {
-    "question": "1. What frequency clock source will produce clock waveforms having a period equal to 5 us (5 microseconds)? ",
-    "answers": {
-      "a": "5 MHz",
-      "b": "0.2 MHz",
-      "c": "2 MHz",
-      "d": "10 MHz"
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. What frequency clock source will produce clock waveforms having a period equal to 5 us (5 microseconds)? ",
+      "answers": {
+        "a": "5 MHz",
+        "b": "0.2 MHz",
+        "c": "2 MHz",
+        "d": "10 MHz"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. To calculate the period of a waveform, we use the formula T = 1/f, where T is the period and f is the frequency. In this case, T = 1/5 MHz = 0.2 microseconds. Since the desired period is 5 microseconds, 5 MHz would not produce the correct waveform.",
+        "b": "Correct. Calculating the period using T = 1/f, we get T = 1/0.2 MHz = 5 microseconds. Therefore, a clock source with a frequency of 0.2 MHz would produce clock waveforms with a period equal to 5 microseconds.",
+        "c": "Incorrect. Frequency of 2 MHz would result in a period of 0.5 microseconds (T = 1/2 MHz = 0.5 microseconds), which is not the desired period of 5 microseconds.",
+        "d": "Incorrect. Using the formula T = 1/f, a frequency of 10 MHz would yield a period of 0.1 microseconds (T = 1/10 MHz = 0.1 microseconds), which is not the desired period of 5 microseconds."
+      },
+      "difficulty": "advanced"
     },
-    "correctAnswer": "b",
-    "explanations": {
-      "a":"To calculate the period of a waveform, we use the formula T = 1/f, where T is the period and f is the frequency. In this case, T = 1/5 MHz = 0.2 microseconds. Since the desired period is 5 microseconds, 5 MHz would not produce the correct waveform.",
-      "b":"Calculating the period using T = 1/f, we get T = 1/0.2 MHz = 5 microseconds. Therefore, a clock source with a frequency of 0.2 MHz would produce clock waveforms with a period equal to 5 microseconds.",
-      "c":"Frequency of 2 MHz would result in a period of 0.5 microseconds (T = 1/2 MHz = 0.5 microseconds), which is not the desired period of 5 microseconds.",
-      "d":"Using the formula T = 1/f, a frequency of 10 MHz would yield a period of 0.1 microseconds (T = 1/10 MHz = 0.1 microseconds), which is not the desired period of 5 microseconds."},
-  "difficulty": "advanced"
-  },
-  {
-    "question": "2. On what parameters do the output of D flip flop depend?",
-    "answers": {
-      "a": "Independent of both previous state and input",
-      "b": "Both on previous state and input",
-      "c": "Only on the previous state",
-      "d": "Only on input D"
+    {
+      "question": "2. On what parameters do the output of D flip flop depend?",
+      "answers": {
+        "a": "Independent of both previous state and input",
+        "b": "Both on previous state and input",
+        "c": "Only on the previous state",
+        "d": "Only on input D"
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect. The output of a D flip flop depends on the input D and the clock, not independent of both.",
+        "c": "Incorrect. The output does not depend only on the previous state; it is determined by the input D at the clock edge.",
+        "b": "Incorrect. The output is not determined by both previous state and input in a D flip flop.",
+        "d": "Correct. The output of a D flip flop is set by the D input at the clock edge."
+      },
+      "difficulty": "beginner"
     },
-    "correctAnswer": "d",
-    "explanations": {
-      "a":" The output of a D flip flop is not independent of both the previous state and the input. The output is influenced by these factors.",
-      "c":"The output of a D flip flop is not dependent on the previous state.",
-      "b":"One or both are wrong",
-      "d":"The flip flop stores and outputs the value of the D input during the appropriate clock edge transition."},
-  "difficulty": "beginner"
-  },
-  {
-    "question": "3. Which statement is true about D latch",
-    "answers": {
-      "a": "The output follows the input everytime",
-      "b": "The output follows the input when clock is high",
-      "c": "The output follows the input when the clock is low",
-      "d": "The output never follows the input"
+    {
+      "question": "3. Which statement is true about D latch",
+      "answers": {
+        "a": "The output follows the input everytime",
+        "b": "The output follows the input when clock is high",
+        "c": "The output follows the input when the clock is low",
+        "d": "The output never follows the input"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. The output of a D latch does not follow the input at all times; it depends on the clock signal.",
+        "b": "Correct. The output follows the input when the clock is high.",
+        "c": "Incorrect. When the clock is low, the output holds its previous value, not the input.",
+        "d": "Incorrect. The output does follow the input under certain conditions."
+      },
+      "difficulty": "intermediate"
     },
-    "correctAnswer": "b",
-    "explanations": {
-      "a":"In a D latch, the output does not necessarily follow the input every time. The output state is only updated when the clock signal is in a particular state",
-      "b":"In a D latch, the output is updated and follows the input signal when the clock signal is high",
-      "c":"When the clock signal is low, the output retains its previous state.",
-      "d":"In a D latch, the output does follow the input at some time."},
-  "difficulty": "intermediate"
-  },
-  {
-    "question": "4. Which latch has the property of either retaining or toggling the previous value ",
-    "answers": {
-      "a": "D-Latch",
-      "b": "T-Latch",
-      "c": "SR-Latch",
-      "d": "None of the above"
+    {
+      "question": "4. Which latch has the property of either retaining or toggling the previous value ",
+      "answers": {
+        "a": "D-Latch",
+        "b": "T-Latch",
+        "c": "SR-Latch",
+        "d": "None of the above"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. A D-latch does not have a toggle function; it stores the input value based on the clock.",
+        "b": "Correct. A T-latch can retain or toggle its previous value depending on the toggle input.",
+        "c": "Incorrect. An SR-latch sets or resets the output but does not toggle based on previous value.",
+        "d": "Incorrect. There is a correct option among the above choices."
+      },
+      "difficulty": "intermediate"
     },
-    "correctAnswer": "b",
-    "explanations": {
-      "a":"The output of a D-latch follows the input value when the clock signal is high, but it retains its previous state when the clock signal is low.",
-      "b":"A T-latch, also known as a Toggle latch or T flip-flop, has the property of either retaining or toggling the previous value. It has a toggle input (T) which, when activated, toggles the output between its current state and the opposite state. When the toggle input is inactive, the output retains its previous value.",
-      "c":"It has two inputs (Set and Reset) that can be used to set or reset the latch to specific states, but it does not toggle the output based on the previous value.",
-      "d":"One of the above is correct."},
-  "difficulty": "intermediate"
-  },
-  {
-    "question": "5. Which statement below is the apt definition of flip flop",
-    "answers": {
-      "a": "Latch",
-      "b": "Coupled latch",
-      "c": "De-coupled latch",
-      "d": "Clocked latch"
-    },
-    "correctAnswer": "d",
-    "explanations": {
-      "a":"Flip flops are more complex and have additional features like clock inputs.",
-      "b":"It might refer to a latch that is connected or coupled to another latch, but it doesn't accurately define a flip flop.",
-      "c":"It could imply a latch that is isolated or disconnected from other components, but it doesn't specifically define a flip flop.",
-      "d":"A clocked latch, also known as a flip flop, is a sequential logic circuit that can store one bit of information and is controlled by a clock signal. The clock input allows the flip flop to synchronize its operations with other components in a digital system, enabling precise timing and sequencing of data"},
-  "difficulty": "beginner"
-  }
-]
+    {
+      "question": "5. Which statement below is the apt definition of flip flop",
+      "answers": {
+        "a": "Latch",
+        "b": "Coupled latch",
+        "c": "De-coupled latch",
+        "d": "Clocked latch"
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect. A latch is not the same as a flip flop; flip flops are clocked devices.",
+        "b": "Incorrect. Coupled latch does not specifically define a flip flop.",
+        "c": "Incorrect. De-coupled latch is not a standard term for flip flop.",
+        "d": "Correct. A flip flop is a clocked latch that stores data based on clock transitions."
+      },
+      "difficulty": "beginner"
+    }
+  ]
 }
